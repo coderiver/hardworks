@@ -34,11 +34,11 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book", Arial, sans-serif 
+// 	font-family: "book", Arial, sans-serif
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -46,10 +46,54 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
+html
+	font-size: 62.5%
+
+$darkgray: #252525
+$gray: #474747
+$orange: #E9801F
+$textdg: #231F20
+
++font("Roboto-Regular", Roboto-Regular)
++font("Roboto-Light", Roboto-Light)
++font("Roboto-Condensed", Roboto-Condensed)
++font("Roboto-BoldCondensed", Roboto-BoldCondensed)
++font("fontawesome", fontawesome)
+
+=regular
+	font-family: Roboto-Regular, Arial, sans-serif
+=light
+	font-family: Roboto-Light, Arial, sans-serif
+=cond
+	font-family: Roboto-Condensed, Arial, sans-serif
+=boldcond
+	font-family: Roboto-BoldCondensed, Arial, sans-serif
+=fa
+	font-family: fontawesome
+
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	+regular
+	+fs(13)
 	line-height: 1.4
+	overflow: hidden
+	color: $textdg
+h1
+	+boldcond
+	+fs(30)
+	text-transform: uppercase
+	font-weight: normal
+h2
+	+boldcond
+	+fs(21)
+	text-transform: uppercase
+	font-weight: normal
+h3
+	+boldcond
+	+fs(16)
+	font-weight: normal
 
-
-// common blocks      
+p
+	+regular
+	+fs(13)
+	color: $textdg
+	font-weight: normal

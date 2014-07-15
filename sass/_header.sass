@@ -1,0 +1,112 @@
+//skew wrap
+.skew
+	display: inline-block
+	height: 71px
+	position: relative
+	&:before, &:after
+		content: ""
+		display: block
+		border: 24px solid transparent
+		position: absolute
+		top: 0
+		z-index: 2
+	&:before
+		border-top-color: $darkgray
+		border-width: 71px 0 0 24px
+		left: -24px
+	&:after
+		border-bottom-color: $darkgray
+		border-width: 0 24px 71px 0
+		right: -24px
+	.menu &
+		&:hover, &.is-active
+			&:before
+				border-top-color: $orange
+			&:after
+				border-bottom-color: $orange
+
+.skew_orange
+	&:before
+		border-top-color: $orange
+	&:after
+		border-bottom-color: $orange
+.skew_gray
+	&:before
+		border-top-color: $gray
+	&:after
+		border-bottom-color: $gray
+//skew wrap
+
+.header
+	background: $darkgray
+	color: #FFF
+	// border-bottom: 4px solid $gray
+	font-size: 0
+
+.logo
+	display: inline-block
+	background: $gray
+	margin-right: 24px
+	a
+		padding: 0 22px 0 18px
+		line-height: 71px
+.logo__pic
+	display: inline-block
+	vertical-align: middle
+	+s(logo)
+
+.menu
+	display: inline-block
+	vertical-align: top
+	font-size: 0
+	li
+		display: inline-block
+		margin-right: 24px
+		&:first-child a
+			padding-left: 30px
+		&:last-child a
+			padding-right: 34px
+	a
+		display: block
+		color: #FFF
+		+cond
+		+fs(16)
+		line-height: 71px
+		text-transform: uppercase
+		text-decoration: none
+		padding: 0 16px
+		&:hover
+			background: $orange
+		&.is-active
+			background: $orange
+
+.header__phone
+	display: inline-block
+	vertical-align: top
+	background: $orange
+	div
+		padding: 0 20px 0 23px
+		margin-right: 9px
+		background: $gray
+		z-index: 3
+	a
+		display: block
+		color: #FFF
+		+fs(16)
+		+light
+		text-decoration: none
+		&:hover
+			color: #FFF
+			text-decoration: none
+		&:first-child
+			margin-top: 21px
+		&:last-child
+			color: $orange
+			+fs(13)
+			+regular
+			line-height: 1
+			&:hover
+				color: $orange
+		strong
+			+boldcond
+			font-weight: normal
