@@ -3,6 +3,7 @@
 	display: inline-block
 	height: 71px
 	position: relative
+	background: $darkgray
 	&:before, &:after
 		content: ""
 		display: block
@@ -22,15 +23,19 @@
 		&:hover, &.is-active
 			&:before
 				border-top-color: $orange
+				+transition(0.15s linear)
 			&:after
 				border-bottom-color: $orange
+				+transition(0.15s linear)
 
 .skew_orange
+	background: $orange
 	&:before
 		border-top-color: $orange
 	&:after
 		border-bottom-color: $orange
 .skew_gray
+	background: $gray
 	&:before
 		border-top-color: $gray
 	&:after
@@ -77,36 +82,41 @@
 		padding: 0 16px
 		&:hover
 			background: $orange
+			+transition(0.15s linear)
 		&.is-active
 			background: $orange
 
-.header__phone
+
+.contacts
 	display: inline-block
 	vertical-align: top
 	background: $orange
 	div
-		padding: 0 20px 0 23px
-		margin-right: 9px
+		padding: 0 20px 0 25px
+		margin-right: 8px
 		background: $gray
 		z-index: 3
-	a
-		display: block
+		left: -1px
+
+.contacts__phone
+	display: block
+	color: #FFF
+	+fs(16)
+	+light
+	text-decoration: none
+	margin-top: 21px
+	&:hover
 		color: #FFF
-		+fs(16)
-		+light
 		text-decoration: none
-		&:hover
-			color: #FFF
-			text-decoration: none
-		&:first-child
-			margin-top: 21px
-		&:last-child
-			color: $orange
-			+fs(13)
-			+regular
-			line-height: 1
-			&:hover
-				color: $orange
-		strong
-			+boldcond
-			font-weight: normal
+	strong
+		+boldcond
+		font-weight: normal
+.contacts__callback
+	color: $orange
+	+fs(13)
+	+regular
+	line-height: 1
+	text-decoration: none
+	&:hover
+		color: $orange
+		text-decoration: none

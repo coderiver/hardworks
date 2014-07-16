@@ -5,12 +5,13 @@
 	td
 		height: 123px
 		vertical-align: middle
+		text-align: center
 		a
 			text-decoration: none
 
 .footer__bottom
 	background: $darkgray
-	padding-top: 20px
+	padding: 27px 0 15px 0
 	+clr
 
 .footer__bottom-left
@@ -18,10 +19,63 @@
 
 .logo_footer
 	background: $darkgray
+	margin: 0
+	margin-top: 3px
+	a
+		padding: 0
+		line-height: 1
 
 .footer__nav
 	display: inline-block
 	vertical-align: top
+	margin-left: 86px
 
 .footer__nav-item
 	display: inline-block
+	margin-right: 51px
+	&:last-child
+		margin-right: 0
+	ul li
+		margin-bottom: 5px
+	a
+		color: #FFF
+		text-decoration: none
+		&:hover
+			color: $orange
+
+.footer__botom-right
+	float: right
+	text-align: right
+
+.footer__contacts
+	.contacts__phone
+		display: inline-block
+		margin-top: 0
+		line-height: 1.4
+		margin-bottom: -2px
+
+.footer__contacts-email
+	display: inline-block
+	color: $orange
+	text-decoration: none
+	line-height: 1
+	&:hover
+		color: $orange
+		text-decoration: none
+
+.footer__contacts-address
+	display: inline-block
+	color: $orange
+	margin-top: 8px
+
+.footer-copyright
+	color: #919191
+	margin-top: 25px
+	+fs(11)
+	a
+		color: $orange
+		text-decoration: none
+		&:hover
+			color: $orange
+			text-decoration: underline
+
