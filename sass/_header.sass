@@ -1,47 +1,3 @@
-//skew wrap
-.skew
-	display: inline-block
-	height: 71px
-	position: relative
-	background: $darkgray
-	&:before, &:after
-		content: ""
-		display: block
-		border: 24px solid transparent
-		position: absolute
-		top: 0
-		z-index: 2
-	&:before
-		border-top-color: $darkgray
-		border-width: 71px 0 0 24px
-		left: -24px
-	&:after
-		border-bottom-color: $darkgray
-		border-width: 0 24px 71px 0
-		right: -24px
-	.menu &
-		&:hover, &.is-active
-			&:before
-				border-top-color: $orange
-				+transition(0.15s linear)
-			&:after
-				border-bottom-color: $orange
-				+transition(0.15s linear)
-
-.skew_orange
-	background: $orange
-	&:before
-		border-top-color: $orange
-	&:after
-		border-bottom-color: $orange
-.skew_gray
-	background: $gray
-	&:before
-		border-top-color: $gray
-	&:after
-		border-bottom-color: $gray
-//skew wrap
-
 .header
 	background: $darkgray
 	color: #FFF
@@ -80,9 +36,9 @@
 		text-transform: uppercase
 		text-decoration: none
 		padding: 0 16px
+		+mytransition
 		&:hover
 			background: $orange
-			+transition(0.15s linear)
 		&.is-active
 			background: $orange
 
