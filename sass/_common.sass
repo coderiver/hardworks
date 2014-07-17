@@ -157,4 +157,33 @@ p
 			border-top-color: #F6861F
 		&:after
 			border-bottom-color: #F6861F
+
+
+.skew-img
+	+transform(skew(18.6deg))
+	img
+		+transform(skew(-18.6deg))
+
+.skew-block
+	+transform(skew(18.6deg))
+	.skew-block__inner
+		+transform(skew(-18.6deg))
+
+.skew-corner
+	position: relative
+	overflow: hidden
+	&:after
+		content: ""
+		display: block
+		width: 122px
+		height: 357px
+		+transform(skew(18.6deg))
+		position: absolute
+		right: -61px
+		bottom: 0
+		background: $orange
+		z-index: 2
+	img
+		display: block
+		position: relative
 //skew wrap
