@@ -177,9 +177,9 @@ p { font-family: Roboto-Regular, Arial, sans-serif; font-size: 13px; font-size: 
 .works__item { display: inline-block; width: 510px; height: 245px; overflow: hidden; box-sizing: border-box; margin-right: 6px; text-align: center; position: relative; }
 .works__item img { margin: 0 -50px; }
 
-.works__item-hover { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.48); }
+.works__item-hover { display: block; opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.48); -webkit-transition: 0.15s linear; -moz-transition: 0.15s linear; -o-transition: 0.15s linear; transition: 0.15s linear; }
 .works__item-hover i { display: inline-block; margin-top: 83px; background: url('../img/icons-s3752b963e0.png') 0 -236px no-repeat; width: 96px; height: 97px; -webkit-transform: skew(-18.6deg); -moz-transform: skew(-18.6deg); -ms-transform: skew(-18.6deg); -o-transform: skew(-18.6deg); transform: skew(-18.6deg); }
-.works__item:hover .works__item-hover { display: block; }
+.works__item:hover .works__item-hover { opacity: 1; }
 
 .wrap-about { padding: 41px 0 39px 0; *zoom: 1; }
 .wrap-about:after { content: " "; display: table; clear: both; }
@@ -270,8 +270,12 @@ p { font-family: Roboto-Regular, Arial, sans-serif; font-size: 13px; font-size: 
 .b-work { display: inline-block; width: 294px; vertical-align: top; color: #252525; font-size: 13px; font-size: 1.3rem; }
 .last-works .b-work { margin-bottom: 10px; }
 
-.b-work__image { width: 100%; height: 238px; font-size: 0; text-align: center; overflow: hidden; }
+.b-work__image { width: 100%; height: 238px; font-size: 0; text-align: center; overflow: hidden; position: relative; }
 .b-work__image img { max-width: 100%; }
+
+.b-work__image-hover { opacity: 0; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.48); -webkit-transition: 0.15s linear; -moz-transition: 0.15s linear; -o-transition: 0.15s linear; transition: 0.15s linear; }
+.b-work__image-hover i { display: block; margin: 70px 0 0 99px; background: url('../img/icons-s3752b963e0.png') 0 -236px no-repeat; width: 96px; height: 97px; }
+.b-work__image:hover .b-work__image-hover { opacity: 1; }
 
 .b-work__about { background: white; line-height: 85px; padding: 0 22px; border-top: 1px solid #dddddd; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; }
 .b-work__about dl { display: inline-block; vertical-align: middle; line-height: 1.25; }
