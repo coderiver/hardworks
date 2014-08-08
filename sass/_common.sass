@@ -113,50 +113,64 @@ p
 	&:before, &:after
 		content: ""
 		display: block
-		border: 24px solid transparent
+		width: 24px
+		height: 100%
+		+transform(skew(18.6deg))
+		background: $darkgray
 		position: absolute
 		top: 0
-		z-index: 2
+		z-index: 0
 		+mytransition
+		// border: 24px solid transparent
 	&:before
-		border-top-color: $darkgray
-		border-width: 71px 0 0 24px
-		left: -24px
+		// border-top-color: $darkgray
+		// border-width: 71px 0 0 24px
+		left: -12px
+
 	&:after
-		border-bottom-color: $darkgray
-		border-width: 0 24px 71px 0
-		right: -24px
+		// border-bottom-color: $darkgray
+		// border-width: 0 24px 71px 0
+		right: -12px
+
 
 	.menu &, .gallery__slider-pagination &
 		&:hover, &.is-active
 			background: $orange
 			&:before
-				border-top-color: $orange
+				// border-top-color: $orange
+				background: $orange
 			&:after
-				border-bottom-color: $orange
+				// border-bottom-color: $orange
+				background: $orange
 
 .skew_orange
 	background: $orange
 	&:before
-		border-top-color: $orange
+		// border-top-color: $orange
+		background: $orange
 	&:after
-		border-bottom-color: $orange
+		// border-bottom-color: $orange
+		background: $orange
 
 .skew_gray
 	background: $gray
 	&:before
-		border-top-color: $gray
+		// border-top-color: $gray
+		background: $gray
 	&:after
-		border-bottom-color: $gray
+		// border-bottom-color: $gray
+		background: $gray
 
 .btn
 	=mytransition
 	&:hover
 		background: #F6861F
 		&:before
-			border-top-color: #F6861F
+			// border-top-color: #F6861F
+			background: #F6861F
 		&:after
-			border-bottom-color: #F6861F
+			// border-bottom-color: #F6861F
+			background: #F6861F
 
 
 .skew-img
